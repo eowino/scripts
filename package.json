@@ -1,0 +1,14 @@
+{
+  "name": "shell-scripts",
+  "version": "0.1.0",
+  "description": "A bunch of scripts that do stuff",
+  "keywords": [
+    "scripts",
+    "nodejs"
+  ],
+  "author": {
+    "name": "Evans Owino",
+    "url": "https://github.com/eowino"
+  },
+  "license": "MIT"
+}
