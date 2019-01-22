@@ -17,12 +17,24 @@ if (minute >= 45) {
   minuteInRange = 15;
 }
 
+function parseHours(hrs = '00') {
+  return +hrs < 9 ? `0${hrs}` : hrs;
+}
+
+function parseMinutes(mins = '00') {
+  return +mins < 10 ? `0${mins}` : mins;
+}
+
 function getURL(time = '1700', from = GUN, to = AFS) {
   return `https://ojp.nationalrail.co.uk/service/timesandfares/${from}/${to}/today/${time}/dep`;
 }
 
 openSites([
-  getURL(`${date.getHours()}${minuteInRange}`),
-  getURL(`${date.getHours()}${minuteInRange}`, RMD),
-  getURL(`${date.getHours()}${minuteInRange}`, AFS, GUN),
+  getURL(`${parseHours(date.getHours())}${parseMinutes(minuteInRange)}`),
+  getURL(`${parseHours(date.getHours())}${parseMinutes(minuteInRange)}`, RMD),
+  getURL(
+    `${parseHours(date.getHours())}${parseMinutes(minuteInRange)}`,
+    AFS,
+    GUN
+  ),
 ]);
