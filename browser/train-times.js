@@ -32,7 +32,7 @@ function getURL(time = '1700', from = GUN, to = RMD) {
 const time = `${parseHours(date.getHours())}${parseMinutes(minuteInRange)}`;
 
 if (date.getHours() > 13) {
-  openSites([getURL(time), getURL(time, RMD, AFS)]);
+  openSites([getURL(time), getURL(time, RMD, AFS)], 'Google Chrome');
 } else {
-  openSites([getURL(time, GUN, RMD), getURL(time, AFS, GUN)]);
+  openSites([getURL(time, GUN, RMD), getURL(time, AFS, GUN)], 'Google Chrome');
 }
