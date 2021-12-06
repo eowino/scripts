@@ -5,3 +5,11 @@ Inspired by [@kentcdodds - macOS: Run a script on login]
 [Mac Automator]: https://support.apple.com/en-gb/guide/automator/welcome/mac
 [Alfred]: https://www.alfredapp.com/
 [@kentcdodds - macOS: Run a script on login]: https://www.youtube.com/watch?v=mOXo-Yjr800
+
+
+Example 
+
+```
+source ~/.zshrc
+node ~/Documents/Projects/shell-scripts/browser/script.js
+```
